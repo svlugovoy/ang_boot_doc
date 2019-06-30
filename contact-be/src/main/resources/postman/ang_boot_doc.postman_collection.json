@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "3cb5f14f-3cc4-45f5-9f5b-7e27c9e76e87",
+		"name": "ang_boot_doc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllContacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveNewContact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"email\": \"emailNEW@gmail.com\",\n        \"phone\": \"+380977770511\",\n        \"gender\": \"MALE\",\n        \"dob\": \"1993-09-01\",\n        \"city\": \"Warsaw\",\n        \"country\": \"Poland\",\n        \"firstname\": \"FirstNEW\",\n        \"lastname\": \"LastNEW\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findContactById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateContact",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"1\",\n        \"email\": \"UPDATED@gmail.com\",\n        \"phone\": \"+380977770511\",\n        \"gender\": \"MALE\",\n        \"dob\": \"1993-09-01\",\n        \"city\": \"Warsaw\",\n        \"country\": \"Poland\",\n        \"firstname\": \"UPDATED\",\n        \"lastname\": \"UPDATED\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteContactById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/contacts/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/contacts/spec?search=city:Warsaw,firstName:Ben",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						"spec"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "city:Warsaw,firstName:Ben"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

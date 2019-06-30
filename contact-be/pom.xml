@@ -16,6 +16,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+
+
     </properties>
 
     <dependencies>
@@ -47,6 +49,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.0-jre</version>
+        </dependency>
+
     </dependencies>
 
     <build>
